@@ -18,7 +18,6 @@ strPartReplace(str, oldStrPart, newStrPart);
 let str1 = "дом 48, корпус 9, парадная 7, этаж 4";
 function numReplace(str1) {
     let arr1 = str1.split(' ');
-    console.log(arr1);
     for (let i = (arr1.length - 1); i >= 0; i--) {
         if (isNaN(parseInt(arr1[i]))) {
             arr1.splice(i, 1);// = parseInt(arr1[i]);
@@ -28,7 +27,19 @@ function numReplace(str1) {
     }
     console.log(arr1);
 }
+// без функции всё работает, при заключении в функцию выдаёт только 4 после того как открываю html заново, при перезагрузке остаётся норм
+
 numReplace(str1);
 
-//Допустим, пользователь вводит названия городов через пробел.
-// Вы их присваиваете переменной. Переставьте названия так, чтобы они были упорядочены по алфавиту.
+//3.Допустим, пользователь вводит названия городов через пробел.
+//Вы их присваиваете переменной. Переставьте названия так, чтобы они были упорядочены по алфавиту.
+let str2 = "луганск донецк коста-рика анапа";
+function unShafl(str2){
+let arr2 = str2.split(' ');
+arr2.sort();
+str2 = arr2.join(' ');
+console.log(str2);
+}
+unShafl(str2);
+
+
