@@ -18,17 +18,20 @@ strPartReplace(str, oldStrPart, newStrPart);
 let str1 = "дом 48, корпус 9, парадная 7, этаж 4";
 function numReplace(str1) {
     let arr1 = str1.split(' ');
+    // console.log(arr1);
     for (let i = (arr1.length - 1); i >= 0; i--) {
         if (isNaN(parseInt(arr1[i]))) {
             arr1.splice(i, 1);// = parseInt(arr1[i]);
+            // console.log(arr1);
+
         } else {
             arr1[i] = parseInt(arr1[i]);
+            // console.log(arr1);
+
         }
     }
     console.log(arr1);
 }
-// без функции всё работает, при заключении в функцию выдаёт только 4 после того как открываю html заново, при перезагрузке остаётся норм
-
 numReplace(str1);
 
 //3.Допустим, пользователь вводит названия городов через пробел.
